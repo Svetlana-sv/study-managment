@@ -2,24 +2,24 @@ const sequelize = require('../db');
 const { DataTypes } = require('sequelize');
 
 const Task = sequelize.define('tasks', {
-  id: {
+  task_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
-  name: {
+  task_name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  description: {
+  task_description: {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  date: {
-    type: DataTypes.DATE,
+  task_date: {
+    type: DataTypes.DATEONLY,
   },
-  date_end: {
-    type: DataTypes.DATE,
+  task_date_end: {
+    type: DataTypes.DATEONLY,
   },
   status: {
     type: DataTypes.STRING,
@@ -29,42 +29,48 @@ const Task = sequelize.define('tasks', {
   //   type: DataTypes.INTEGER,
   //   allowNull: false,
   // },
+},{
+  timestamps: false,
 });
 
 const Material = sequelize.define('materials', {
-  id: {
+  material_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
-  name: {
+  material_name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  description: {
+  material_description: {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  link: {
+  material_link: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  date: {
-    type: DataTypes.DATE,
+  material_date: {
+    type: DataTypes.DATEONLY,
   }
+},{
+  timestamps: false,
 });
 
 const Subject = sequelize.define('subjects', {
-  id: {
+  subject_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
   },
-  name: {
+  subject_name: {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true
   }
+},{
+  timestamps: false,
 });
 
 Subject.hasMany(Task)
