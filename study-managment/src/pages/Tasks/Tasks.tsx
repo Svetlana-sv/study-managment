@@ -4,6 +4,9 @@ import Button from '../../components/Button/Button';
 import { GridTasks } from '../../components/Containers/ContainerStyles';
 import { ContainerMain } from '../../components/Containers/ContainerMainStyles';
 
+import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
+import { fetchTasks } from '../../store/task-actions';
+
 const TaskCard = styled.div`
   width: 100%;
   min-height: 108px;
@@ -18,28 +21,29 @@ const Title = styled.h1`
   font-size: 22px;
   font-weight: bold;
 `;
-const Description = styled.p`
+const Paragrpaph = styled.p`
   font-size: 20px;
 `;
 
 const Tasks = () => {
+  // ! Разобраться в useAppDispatch() и useAppSelector()
+  const dispatch = useAppDispatch();
+  const tasks = useAppSelector((state) => state.task.tasks);
+  dispatch(fetchTasks());
+
   return (
     <ContainerMain>
       <GridTasks>
-        <TaskCard>
-          <Title>Task1 {'от 29.02'}</Title>
-          <Description>Description task</Description>
-        </TaskCard>{' '}
-        <TaskCard>
-          <Title>Task1 {'от 29.02'}</Title>
-          <Description>Description task</Description>
-        </TaskCard>{' '}
-        <TaskCard>
-          <Title>Task1 {'от 29.02'}</Title>
-          <Description>Description task</Description>
-        </TaskCard>
+        {tasks.map((task: any) => (
+          <TaskCard key={task.task_id}>
+            <Title>{task.task_name}</Title>
+            <Paragrpaph>{task.task_description}</Paragrpaph>
+            <Paragrpaph>{task.task_date}</Paragrpaph>
+            <Paragrpaph>{task.task_date_end}</Paragrpaph>
+            <Paragrpaph>{task.status}</Paragrpaph>
+          </TaskCard>
+        ))}
       </GridTasks>
-
       <Button buttonLabel="Добавить" />
     </ContainerMain>
   );

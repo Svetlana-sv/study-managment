@@ -8,6 +8,6 @@ export const ContainerMain = styled.div`
   padding: 20px;
   border: 1px solid #e9e9e9;
   border-radius: 39px;
-  margin: 0 auto;
+  margin: 60px auto;
 `
 

@@ -22,23 +22,22 @@ const Title = styled.p`
 const Materials = () => {
   return (
     <ContainerMain>
-<FlexMaterial>
-<MaterialCard>
-        <Title>Технический перевод - {2} метериала</Title>
-        <Button buttonLabel="Показать" />
-      </MaterialCard>
+      <FlexMaterial>
+        <MaterialCard>
+          <Title>Технический перевод - {2} метериала</Title>
+          <Button buttonLabel="Показать" />
+        </MaterialCard>
 
-      <MaterialCard>
-        <Title>Технический перевод - {2} метериала</Title>
-        <Button buttonLabel="Показать" />
-      </MaterialCard>
+        <MaterialCard>
+          <Title>Технический перевод - {2} метериала</Title>
+          <Button buttonLabel="Показать" />
+        </MaterialCard>
 
-      <MaterialCard>
-        <Title>Технический перевод - {2} метериала</Title>
-        <Button buttonLabel="Показать" />
-      </MaterialCard>
-</FlexMaterial>
-      
+        <MaterialCard>
+          <Title>Технический перевод - {2} метериала</Title>
+          <Button buttonLabel="Показать" />
+        </MaterialCard>
+      </FlexMaterial>
 
       <Button buttonLabel="Создать" />
     </ContainerMain>

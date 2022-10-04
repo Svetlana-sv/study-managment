@@ -12,22 +12,21 @@ const PerformanceCard = styled.div`
   border-radius: 16px;
   padding: 10px;
   margin: 10px auto;
-`
+`;
 
 const Paragraph = styled.p`
   font-size: 20px;
-`
+`;
 // Страница успеваемости
 const Performance = () => {
   return (
     <ContainerMain>
       <FlexPerformance>
         <PerformanceCard>
-        <Paragraph>Техический перевод</Paragraph>
-        <div>1</div>
-        <Paragraph>98%</Paragraph>
+          <Paragraph>Техический перевод</Paragraph>
+          <div>1</div>
+          <Paragraph>98%</Paragraph>
         </PerformanceCard>
-        
       </FlexPerformance>
     </ContainerMain>
   );

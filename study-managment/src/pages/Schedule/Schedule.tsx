@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { GridSchedule } from '../../components/Containers/ContainerStyles';
 import { ContainerMain } from '../../components/Containers/ContainerMainStyles';
 
+
 const ScheduleCard = styled.div`
   width: 230px;
   min-height: 258px;
@@ -35,25 +36,24 @@ const Schedule = () => {
   return (
     <ContainerMain>
       <GridSchedule>
-      <ScheduleCard>
-        <Title>Понедельник</Title>
-        <Time>12:20 - 13:50</Time>
-        <Name>Технический перевод</Name>
-      </ScheduleCard>
+        <ScheduleCard>
+          <Title>Понедельник</Title>
+          <Time>12:20 - 13:50</Time>
+          <Name>Технический перевод</Name>
+        </ScheduleCard>
 
-      <ScheduleCard>
-        <Title>Понедельник</Title>
-        <Time>12:20 - 13:50</Time>
-        <Name>Технический перевод</Name>
-      </ScheduleCard>
+        <ScheduleCard>
+          <Title>Понедельник</Title>
+          <Time>12:20 - 13:50</Time>
+          <Name>Технический перевод</Name>
+        </ScheduleCard>
 
-      <ScheduleCard>
-        <Title>Понедельник</Title>
-        <Time>12:20 - 13:50</Time>
-        <Name>Технический перевод</Name>
-      </ScheduleCard>
+        <ScheduleCard>
+          <Title>Понедельник</Title>
+          <Time>12:20 - 13:50</Time>
+          <Name>Технический перевод</Name>
+        </ScheduleCard>
       </GridSchedule>
-      
     </ContainerMain>
   );
 };
